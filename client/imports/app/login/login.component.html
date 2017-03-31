@@ -1,0 +1,17 @@
+
+<form (ngSubmit)="onSubmit(loginFG)" [formGroup]="loginFG">
+    <span>{{'email'|translate}}</span>
+    <div [ngClass]="{'error':loginFG.get('email').hasError('required') && loginFG.get('email').touched}">
+        <input type="text" name="email" placeholder="email" formControlName="email">
+    </div>
+    <div *ngIf="loginFG.get('email').hasError('minlength')">
+        {{'min5length'|translate}}
+    </div>
+    
+    <span>{{'password'|translate}}</span>
+    <div [ngClass]="{'error':loginFG.get('pass').hasError('required') && loginFG.get('pass').touched}">
+        <input type="text" name="pass" placeholder="pass" formControlName="pass">
+    </div>
+
+    <button type="submit">signup</button>
+</form>

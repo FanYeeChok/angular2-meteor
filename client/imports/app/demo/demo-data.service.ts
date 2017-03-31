@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { ObservableCursor } from "meteor-rxjs";
-import { Demo } from "../../../../both/models/demo.model";
-import { DemoCollection } from "../../../../both/collections/demo.collection";
+import { Demo } from "../../../../both/demo/demo.model";
+import { DemoCollection } from "../../../../both/demo/demo.collection";
 
 @Injectable()
 export class DemoDataService {
